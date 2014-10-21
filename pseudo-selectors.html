@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<style>
+	body #second {
+		color: #00F;
+	}
+	#first div {
+		color: #F00;
+	}
+	#first #second div.third {
+		color: #0FF;
+	}
+	body #second .third { 
+		color: #FF0;
+	}
+	.third {
+		color: #FFF;
+	}
+	a[href^="mailto:"] {
+		color: #F00;
+		text-decoration: none;
+	}
+	a[href$=".html"] {
+		color: #FF0;
+		text-decoration: none;
+	}
+	h7[title*="cap"] {
+		color: #0FF;
+	}
+	.text {
+		width: 300px;
+		display: inline-block;
+		word-wrap: wrap;
+	}
+	.text:first-line {
+		color: #F00;
+	}
+	.text:first-letter {
+		color: #00F;
+		font-size: 32px;
+	}
+	h4:before { content: "Capítulo - "; }
+	h4:after   { content: "."; }
+
+	ul.test li:nth-child(3) {
+		color: #F00;
+	}
+	ul.test li:last-child {
+		color: #00F;
+	}
+	ul.test li:nth-of-type(2) {
+		color: #F3C;
+	}
+	ul.pares li:nth-child(2n) {
+		color: #CCC;
+	}
+</style>
+<body>
+	<h1>CSS Priority</h1>
+	<div id="first">
+    	<div id="second">1
+        	<div class="third">ul</div>
+        </div>
+        <div>2</div>
+    </div>
+    
+	<h1>Pseudo selectors</h1>
+    <a href="mailto:algo@algo.com">algo</a>
+    <a href="algo.html">hmtl</a>
+    <h7 title="capitulo 1">1</h7>
+    <ul class="test">
+    	<li>1</li>
+    	<li>2 nth-of-type</li>
+    	<li>3 nth-child</li>
+    	<li>4</li>
+    	<li>5 last</li>
+    </ul>
+
+	<h7>Pares</h7>
+    <ul class="pares">
+    	<li>1</li>
+    	<li>2</li>
+    	<li>3</li>
+    	<li>4</li>
+    	<li>5</li>
+    </ul>
+    
+	<h1>Before and after</h1>
+    <h4 title="capitulo 1">1</h4>
+    <h4 title="capi">2</h4>
+
+	<h1>First letter and first line</h1>
+    <p class="text">
+    	fdfadsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss fdfda fdsafda fdsfa fdsfads fdasfdsafd fdsfa fdsaf sdfdas
+    </p>
+
+</body>
+</html>
